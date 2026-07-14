@@ -1,0 +1,5 @@
+Ali,85
+Sara,92
+haris,76
+mohammad,88
+abdullah,64
