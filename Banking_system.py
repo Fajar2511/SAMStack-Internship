@@ -12,7 +12,7 @@ class Account:
     def balance(self, value):
         if value < 0:
             raise ValueError("Balance cannot be negative")
-        self.__balance = value # Fixed: indentation
+        self.__balance = value 
 
     def deposit(self, amount):
         if amount > 0:
@@ -46,7 +46,7 @@ class SavingsAccount(Account):
         self.deposit(interest)
         print(f"Interest of ${interest:.2f} applied @ {self.interest_rate}%")
 
-class CheckingAccount(Account): # Task 1: Overdraft
+class CheckingAccount(Account): 
     def __init__(self, account_number, account_holder, balance, overdraft_limit):
         super().__init__(account_number, account_holder, balance)
         self.overdraft_limit = overdraft_limit
@@ -123,7 +123,7 @@ class Bank:
         try:
             amount = float(input("Enter amount: "))
             if sender in self.accounts and receiver in self.accounts:
-                self.accounts[sender].withdraw(amount) # Task 3: Constraints check
+                self.accounts[sender].withdraw(amount) 
                 self.accounts[receiver].deposit(amount)
                 print("Transfer successful")
             else:
